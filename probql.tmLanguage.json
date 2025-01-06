@@ -1,0 +1,108 @@
+{
+    "name": "ProbQL",
+    "scopeName": "source.probql",
+    "fileTypes": ["probql"],
+    "patterns": [
+        {
+            "name": "comment.line.double-slash.probql",
+            "match": "//.*$",
+            "comment": "Single-line comments"
+        },
+        {
+            "name": "keyword.control.probql",
+            "match": "\\b(import|function|if|else)\\b",
+            "comment": "Control keywords"
+        },
+        {
+            "name": "storage.type.module.probql",
+            "match": "\\b(UI|ProbabilityModule|QuantumModule|EnergyModule|SafetyModule|LearningModule)\\b",
+            "comment": "Module names"
+        },
+        {
+            "name": "entity.name.function.probql",
+            "match": "\\b(calculate_probability|manipulate_probability|entangle_particles|collapse_wavefunction|monitor_energy_levels|allocate_energy|check_for_anomalies|initiate_fail_safe|analyze_performance|update_algorithms)\\b",
+            "comment": "Function names"
+        },
+        {
+            "name": "constant.numeric.probql",
+            "match": "\\b\\d+(\\.\\d+)?\\b",
+            "comment": "Numeric constants"
+        },
+        {
+            "name": "string.quoted.double.probql",
+            "match": "\"[^\"]*\"",
+            "comment": "Double-quoted strings"
+        },
+        {
+            "name": "punctuation.definition.comment.probql",
+            "match": "//",
+            "comment": "Comment delimiter"
+        },
+        {
+            "name": "punctuation.definition.string.begin.probql",
+            "match": "\"",
+            "comment": "String delimiter"
+        },
+        {
+            "name": "punctuation.definition.string.end.probql",
+            "match": "\"",
+            "comment": "String delimiter"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.probql",
+                    "match": "//.*$",
+                    "comment": "Single-line comments"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.probql",
+                    "match": "\\b(import|function|if|else)\\b",
+                    "comment": "Control keywords"
+                }
+            ]
+        },
+        "modules": {
+            "patterns": [
+                {
+                    "name": "storage.type.module.probql",
+                    "match": "\\b(UI|ProbabilityModule|QuantumModule|EnergyModule|SafetyModule|LearningModule)\\b",
+                    "comment": "Module names"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.probql",
+                    "match": "\\b(calculate_probability|manipulate_probability|entangle_particles|collapse_wavefunction|monitor_energy_levels|allocate_energy|check_for_anomalies|initiate_fail_safe|analyze_performance|update_algorithms)\\b",
+                    "comment": "Function names"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.probql",
+                    "match": "\\b\\d+(\\.\\d+)?\\b",
+                    "comment": "Numeric constants"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.probql",
+                    "match": "\"[^\"]*\"",
+                    "comment": "Double-quoted strings"
+                }
+            ]
+        }
+    }
+}
