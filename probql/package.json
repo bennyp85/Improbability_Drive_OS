@@ -1,7 +1,7 @@
 {
   "name": "probql",
-  "displayName": "probql",
-  "description": "",
+  "displayName": "ProbQL",
+  "description": "ProbQL Programming Language",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
@@ -12,7 +12,7 @@
   "contributes": {
     "languages": [{
       "id": "probql",
-      "aliases": ["ProbQL", "probql"],
+      "aliases": ["ProbQL Programming Language", "probql"],
       "extensions": [".probql"],
       "configuration": "./language-configuration.json"
     }],

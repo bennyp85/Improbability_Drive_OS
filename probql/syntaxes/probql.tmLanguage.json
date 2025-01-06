@@ -1,57 +1,108 @@
 {
     "name": "ProbQL",
     "scopeName": "source.probql",
+    "fileTypes": ["probql"],
     "patterns": [
         {
-            "match": "\\b(function|module|import|export|return|if|else|for|while|break|continue|let|const|var|new|this|class|extends|super|static|async|await|try|catch|finally|throw|yield|switch|case|default|delete|typeof|instanceof|void|in|of|with|debugger)\\b",
-            "name": "keyword.control.probql"
+            "name": "comment.line.double-slash.probql",
+            "match": "//.*$",
+            "comment": "Single-line comments"
         },
         {
-            "match": "\\b(true|false|null|undefined|NaN|Infinity)\\b",
-            "name": "constant.language.probql"
+            "name": "keyword.control.probql",
+            "match": "\\b(import|function|if|else)\\b",
+            "comment": "Control keywords"
         },
         {
+            "name": "storage.type.module.probql",
             "match": "\\b(UI|ProbabilityModule|QuantumModule|EnergyModule|SafetyModule|LearningModule)\\b",
-            "name": "support.class.probql"
+            "comment": "Module names"
         },
         {
-            "match": "\\b([0-9]+(\\.[0-9]+)?)\\b",
-            "name": "constant.numeric.probql"
+            "name": "entity.name.function.probql",
+            "match": "\\b(calculate_probability|manipulate_probability|entangle_particles|collapse_wavefunction|monitor_energy_levels|allocate_energy|check_for_anomalies|initiate_fail_safe|analyze_performance|update_algorithms)\\b",
+            "comment": "Function names"
         },
         {
-            "match": "\".*?\"|'.*?'",
-            "name": "string.quoted.probql",
-            "begin": "\"|'",
-            "end": "\"|'",
+            "name": "constant.numeric.probql",
+            "match": "\\b\\d+(\\.\\d+)?\\b",
+            "comment": "Numeric constants"
+        },
+        {
+            "name": "string.quoted.double.probql",
+            "match": "\"[^\"]*\"",
+            "comment": "Double-quoted strings"
+        },
+        {
+            "name": "punctuation.definition.comment.probql",
+            "match": "//",
+            "comment": "Comment delimiter"
+        },
+        {
+            "name": "punctuation.definition.string.begin.probql",
+            "match": "\"",
+            "comment": "String delimiter"
+        },
+        {
+            "name": "punctuation.definition.string.end.probql",
+            "match": "\"",
+            "comment": "String delimiter"
+        }
+    ],
+    "repository": {
+        "comments": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.probql",
-                    "match": "\\\\(.)"
+                    "name": "comment.line.double-slash.probql",
+                    "match": "//.*$",
+                    "comment": "Single-line comments"
                 }
             ]
         },
-        {
-            "name": "comment.line.double-slash.probql",
-            "match": "//.*"
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.probql",
+                    "match": "\\b(import|function|if|else)\\b",
+                    "comment": "Control keywords"
+                }
+            ]
         },
-        {
-            "match": "[.(){}=,;:\\[\\]]",
-            "name": "punctuation.operator.probql"
+        "modules": {
+            "patterns": [
+                {
+                    "name": "storage.type.module.probql",
+                    "match": "\\b(UI|ProbabilityModule|QuantumModule|EnergyModule|SafetyModule|LearningModule)\\b",
+                    "comment": "Module names"
+                }
+            ]
         },
-        {
-            "match": "[+\\-*/%&|^~!<>?]=?|&&|\\|\\||\\?\\?|\\*\\*|\\+\\+|--|=>|\\.",
-            "name": "keyword.operator.probql"
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.probql",
+                    "match": "\\b(calculate_probability|manipulate_probability|entangle_particles|collapse_wavefunction|monitor_energy_levels|allocate_energy|check_for_anomalies|initiate_fail_safe|analyze_performance|update_algorithms)\\b",
+                    "comment": "Function names"
+                }
+            ]
         },
-        {
-            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
-            "name": "variable.other.probql"
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.probql",
+                    "match": "\\b\\d+(\\.\\d+)?\\b",
+                    "comment": "Numeric constants"
+                }
+            ]
         },
-        {
-            "match": "\\b[A-Z][A-Z0-9_]+\\b",
-            "name": "constant.other.probql"
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.probql",
+                    "match": "\"[^\"]*\"",
+                    "comment": "Double-quoted strings"
+                }
+            ]
         }
-    ],
-    "fileTypes": [
-        "probql"
-    ]
+    }
 }
