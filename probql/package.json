@@ -11,14 +11,14 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "",
-      "aliases": ["ProbQL", ""],
+      "id": "probql",
+      "aliases": ["ProbQL", "probql"],
       "extensions": [".probql"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "",
-      "scopeName": "",
+      "language": "probql",
+      "scopeName": "source.probql",
       "path": "./syntaxes/.tmLanguage.json"
     }]
   }
