@@ -1,6 +1,11 @@
 // Improbability Drive OS - ProbQL Code
 
-// Module: User Interface
+import "./ui_module.probql"
+import "./probability_module.probql"
+import "./quantum_module.probql"
+import "./energy_module.probql"
+import "./safety_module.probql"
+import "./learning_module.probql"
 UI {
     input target_location;
     display status_messages;

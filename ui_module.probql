@@ -1,0 +1,14 @@
+// User Interface Module
+UI {
+    function initialize() {
+        // Initialize UI components
+    }
+
+    function get_input() {
+        // Get user input for target location
+    }
+
+    function display(message) {
+        // Display status messages to user
+    }
+}
