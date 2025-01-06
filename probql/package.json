@@ -19,7 +19,7 @@
     "grammars": [{
       "language": "probql",
       "scopeName": "source.probql",
-      "path": "./syntaxes/.tmLanguage.json"
+      "path": "./syntaxes/probql.tmLanguage.json"
     }]
   }
 }
